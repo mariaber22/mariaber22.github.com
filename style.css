@@ -12,3 +12,45 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
 }
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* Componentes */
+.header {
+  background: #caa68c;
+  display: grid;
+}
+.nav {
+  border: 1px solid black;
+  background: #dab2b2;
+}
+.nav ul {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.nav ul li {
+}
+
+.nav ul li:nth-child(1) {
+  background: hotpink;
+  grid-column: 1 / 2;
+}
+.nav ul li:nth-child(2) {
+  background: lightskyblue;
+  grid-column: 3 / 4;
+}
+.nav ul li:nth-child(3) {
+  background: plum;
+  grid-column: 3 / 4;
+}
+
+.nav ul li a {
+}
+
+.titulo {
+  text-align: center;
+}
