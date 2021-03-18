@@ -7,9 +7,9 @@
   --secundario-claro: 5;
   --secundario-fuerte: ;
   --bg: #ffffff;
-  --font-base: "Montserrat", sans-serif;
-  --font-headings: "Roboto";
-  --h1: 109px;
+  --font-base: "Roboto";
+  --font-headings: "Montserrat", sans-serif;
+  --h1: 108px;
   --h2: 81px;
   --h3: 54px;
   --h4: 36px;
@@ -23,12 +23,20 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-base);
+  font-family: var(--font-headings);
+}
+
+h3 {
+  font-size: var(--h3);
 }
 
 body {
   font-family: var(--font-base);
+}
+
+.nav {
   background-image: url("https://res.cloudinary.com/dk8ssnuuv/image/upload/v1614715309/Dibujando_1_rryz6h.jpg");
+  height: 1000px;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -48,6 +56,7 @@ a {
 .nav ul {
   display: flex;
   justify-content: space-between;
+  padding-top: 40px;
 }
 
 .nav ul > * {
@@ -70,4 +79,30 @@ nav ul li a {
 .header h1 {
   color: white;
   text-align: center;
+}
+
+.contact {
+  color: black;
+  font-family: var(--font-headings);
+}
+
+.section-about {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  padding-left: 150px;
+}
+
+.cat-about {
+  font-weight: 400;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.description {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  margin-top: 20px;
+  padding-right: 150px;
 }
