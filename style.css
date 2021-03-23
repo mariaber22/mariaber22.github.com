@@ -36,11 +36,9 @@ body {
 
 .nav {
   background-image: url("https://res.cloudinary.com/dk8ssnuuv/image/upload/v1614715309/Dibujando_1_rryz6h.jpg");
-  height: auto;
-  background-size: contain;
+  height: 1000px;
+  background-size: cover;
   background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
 }
 
 ul li {
@@ -53,14 +51,6 @@ a {
 }
 
 .layout {
-  /* background-color: blue; */
-}
-
-.hero {
-  background-image: url("https://res.cloudinary.com/dk8ssnuuv/image/upload/v1614715309/Dibujando_1_rryz6h.jpg");
-  height: auto;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .nav ul {
@@ -79,6 +69,14 @@ a {
 
 nav ul li a {
   color: white;
+}
+
+nav ul > * {
+  transition: all 450ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
+}
+
+nav ul li:hover {
+  transform: translateY(-10px);
 }
 
 .header {
