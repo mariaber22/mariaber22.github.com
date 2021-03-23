@@ -1,7 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap");
+/* Tipografia */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap');
 
+/* Variables */
+:root {
+  --bg: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  --font-headings: 'Montserrat', sans-serif;
+  --h1: 108px;
+  --h2: 81px;
+  --h3: 54px;
+  --h4: 36px;
+  --h5: 24px;
+  --h6: 16px;
+}
+
+/* Base */
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: inherit;
 }
 
 h1,
@@ -10,47 +25,69 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-headings);
 }
-ul li {
-  list-style: none;
+
+ul {
+  margin: 0;
 }
 
 a {
+  color: white;
   text-decoration: none;
 }
+
 /* Componentes */
 .header {
-  background: #caa68c;
-  display: grid;
+  background-image: url('https://res.cloudinary.com/dk8ssnuuv/image/upload/v1614715309/Dibujando_1_rryz6h.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1000px;
+  color: white;
 }
-.nav {
-  border: 1px solid black;
-  background: #dab2b2;
-}
+
 .nav ul {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
 }
-.nav ul li {
-}
-
-.nav ul li:nth-child(1) {
-  background: hotpink;
-  grid-column: 1 / 2;
-}
-.nav ul li:nth-child(2) {
-  background: lightskyblue;
-  grid-column: 3 / 4;
-}
-.nav ul li:nth-child(3) {
-  background: plum;
-  grid-column: 3 / 4;
+.nav ul > * {
+  flex: 1 1 0%;
+  transition: all 450ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
 }
 
-.nav ul li a {
+.nav ul > :nth-child(2) {
+  flex: 5 1 0%;
+}
+
+nav ul li:hover {
+  transform: translateY(-10px);
 }
 
 .titulo {
+  min-height: 650px;
+  line-height: 650px;
   text-align: center;
+}
+
+.categoria {
+  margin: 60px 0;
+  display: grid;
+  grid-row-gap: 20px;
+  padding-left: 150px;
+}
+
+.categoria-heading {
+  font-size: var(--h3);
+  font-weight: 400;
+}
+
+.categoria-description {
+  max-width: 60vw;
+  margin-bottom: 60px;
+}
+
+.categoria-images {
+  display: flex;
+  gap: 20px;
 }
