@@ -51,13 +51,13 @@ a {
   justify-content: space-between;
   padding-top: 40px;
 }
-.nav ul > * {
-  flex: 1 1 0%;
+.nav ul li {
+  flex: 1 1 0;
   transition: all 450ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
 }
 
-.nav ul > :nth-child(2) {
-  flex: 5 1 0%;
+.nav ul li:nth-child(2) {
+  flex: 5 1 0;
 }
 
 nav ul li:hover {
