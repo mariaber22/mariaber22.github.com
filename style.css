@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap');
 
 /* Variables */
-:root {
+ :root {
   --bg: #ffffff;
   font-family: 'Roboto', sans-serif;
   --font-headings: 'Montserrat', sans-serif;
@@ -28,10 +28,6 @@ h6 {
   font-family: var(--font-headings);
 }
 
-ul {
-  margin: 0;
-}
-
 a {
   color: white;
   text-decoration: none;
@@ -46,22 +42,37 @@ a {
   color: white;
 }
 
+.nav {
+  width: 90vw;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
 .nav ul {
   display: flex;
-  justify-content: space-between;
-  padding-top: 40px;
 }
+
 .nav ul li {
-  flex: 1 1 0;
+  /* background-color: rgba(0, 0, 255, 0.2); */
+  height: 40px;
+  line-height: 40px;
+}
+
+.nav ul li:last-child {
+  margin-left: auto;
+}
+
+.nav ul li a {
+  display: block;
   transition: all 450ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
 }
 
-.nav ul li:nth-child(2) {
-  flex: 5 1 0;
+.nav ul li:not(:last-child) a {
+  margin-right: 100px;
 }
 
-nav ul li:hover {
-  transform: translateY(-10px);
+nav ul li a:hover {
+  transform: translateY(-10px) scale(1.1);
 }
 
 .titulo {
