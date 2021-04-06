@@ -1,11 +1,12 @@
 /* Tipografia */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap");
 
 /* Variables */
- :root {
+:root {
+  --primario: #a09487;
   --bg: #ffffff;
-  font-family: 'Roboto', sans-serif;
-  --font-headings: 'Montserrat', sans-serif;
+  font-family: "Roboto", sans-serif;
+  --font-headings: "Montserrat", sans-serif;
   --h1: 108px;
   --h2: 81px;
   --h3: 54px;
@@ -26,6 +27,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-headings);
+  color: var(--primario);
 }
 
 a {
@@ -35,7 +37,7 @@ a {
 
 /* Componentes */
 .header {
-  background-image: url('https://res.cloudinary.com/dk8ssnuuv/image/upload/v1614715309/Dibujando_1_rryz6h.jpg');
+  background-image: url("https://res.cloudinary.com/dk8ssnuuv/image/upload/v1614715309/Dibujando_1_rryz6h.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 1000px;
@@ -79,6 +81,7 @@ nav ul li a:hover {
   min-height: 650px;
   line-height: 650px;
   text-align: center;
+  color: white;
 }
 
 .categoria {
@@ -99,6 +102,114 @@ nav ul li a:hover {
 }
 
 .categoria-images {
-  display: flex;
+  display: grid;
+  margin-right: 60px;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+}
+
+.serigrafía {
+  grid-column: 1/2;
+}
+
+.pintura {
+  grid-column: 2/3;
+}
+
+.kris {
+  grid-column: 3/4;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: var(--primario);
+  background: var(--primario); /* Black see-through */
+  color: #ffffff;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: #ffffff;
+  font-size: 60px;
+  font-family: var(--font-headings);
+  padding: 10px;
+  text-align: left;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.branding-grid {
+  margin: 0px;
+  grid-row-gap: 20px;
+  grid-column-gap: 15px;
+  display: grid;
+  grid-template-rows: 400px 400px 450px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.nispero {
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+}
+
+.valuarte {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  justify-self: center;
+}
+
+.pdc {
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  justify-self: right;
+}
+
+.indi {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.exploring {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+.assalam {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  align-self: center;
+}
+
+.bay {
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
+}
+
+.redes {
+  display: grid;
+  justify-self: right;
+  margin-right: 60px;
+  grid-column-gap: 20px;
+  grid-template-columns: 50px 50px;
+}
+
+.insta {
+  display: flex;
+}
+.be {
+  display: flex;
 }
