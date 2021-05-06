@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>María Berjón - Diseñado gráfico</title>
+    <title>María Berjón - Diseñadora gráfica</title>
     <link
       rel="stylesheet"
       href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
@@ -16,13 +16,13 @@
       <nav class="nav">
         <ul role="list">
           <li>
-            <a href="#">about</a>
+            <a class="menu-link" href="#about-link">about</a>
           </li>
           <li>
-            <a href="#">work</a>
+            <a class="menu-link" href="#work-link">work</a>
           </li>
           <li>
-            <a href="#">contact</a>
+            <a class="menu-link" href="#contacto-link">contact</a>
           </li>
         </ul>
       </nav>
@@ -30,7 +30,7 @@
     </header>
 
     <section class="categoria">
-      <h3 class="categoria-heading">About</h3>
+      <h3 class="categoria-heading" id="about-link">About</h3>
       <p class="categoria-description">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus est,
         modi nulla magni quod, quae vel esse nisi animi voluptate dolorem ipsa
@@ -45,20 +45,6 @@
         quis obcaecati repellendus, deleniti reiciendis numquam.
       </p>
       <div class="categoria-images">
-        <img
-          class="serigrafia"
-          src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616038667/serigrafi%CC%81a_yscpcq.jpg"
-          alt="Proyecto serigrafia"
-          width="400"
-          height="544"
-        />
-        <img
-          class="pintura"
-          src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616038661/PINTURA_zvs8hy.jpg"
-          alt="Proyecto pintura"
-          width="400"
-          height="544"
-        />
         <div class="container">
           <a href=""
             ><img
@@ -69,7 +55,33 @@
               height="544"
             />
           </a>
-          <div class="overlay">Branding</div>
+          <div class="overlay" id="work-link">Branding</div>
+        </div>
+
+        <div class="container">
+          <a href="">
+            <img
+              class="serigrafia"
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620271916/lesgai_qszwqn.jpg"
+              alt="Proyecto serigrafia"
+              width="400"
+              height="544"
+            />
+          </a>
+          <div class="overlay">Proyectos de diseño</div>
+        </div>
+
+        <div class="container">
+          <a href="">
+            <img
+              class="pintura"
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620271913/cuadroazul_jzwyzz.jpg"
+              alt="Proyecto pintura"
+              width="400"
+              height="544"
+            />
+          </a>
+          <div class="overlay">Arte</div>
         </div>
       </div>
     </section>
@@ -90,13 +102,13 @@
           class="nispero"
           src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474327/nispero_fuqdop.jpg"
           alt="Nispero"
-          width="600"
+          width="550"
           height="400"
         />
         <img
-          class="valuarte"
-          src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474935/valuarte_vawgvg.jpg"
-          alt="Valuarte"
+          class="kreat"
+          src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620268439/kreat_nccwe3.jpg"
+          alt="Kreat"
           height="400"
           width="500"
         />
@@ -108,9 +120,9 @@
           height="400"
         />
         <img
-          class="indi"
-          src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474926/INDI_ROSE_luc3y0.jpg"
-          alt="Indi Rose"
+          class="kuzkym"
+          src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620148738/web_mockup_kuzkym.jpg"
+          alt="Kuzkym"
           width="800"
           height="400"
         />
@@ -128,13 +140,7 @@
           width="690"
           height="400"
         />
-        <img
-          class="exploring"
-          src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616475275/exploring_life_wl1nn0.jpg"
-          alt="Exploring life"
-          width="690"
-          height="450"
-        />
+
         <img
           class="assalam"
           src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616475271/asallam_blyttu.jpg"
@@ -142,17 +148,26 @@
           width="685"
           height="450"
         />
+
         <img
-          class="bay"
-          src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616475276/Bay_Area_khsk6a.jpg"
-          alt="Bay Area"
+          class="valuarte"
+          src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474935/valuarte_vawgvg.jpg"
+          alt="Valuarte"
+          width="690"
+          height="450"
+        />
+
+        <img
+          class="tentree"
+          src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620268631/tentreemockup_mc3mtt.jpg"
+          alt="Tentree "
           width="685"
           height="450"
         />
       </nav>
     </section>
     <section class="categoria">
-      <h3 class="categoria-heading">Contacto</h3>
+      <h3 class="categoria-heading" id="contacto-link">Contacto</h3>
       <p class="categoria-description">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit,
         quod, consectetur quo accusamus in, voluptates exercitationem itaque
