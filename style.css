@@ -36,6 +36,10 @@ a {
 }
 
 /* Componentes */
+/* .layout {
+  background-color: rgb(163, 161, 161);
+  opacity: 0.8;
+} */
 .header {
   background-image: url("https://res.cloudinary.com/dk8ssnuuv/image/upload/v1614715309/Dibujando_1_rryz6h.jpg");
   background-size: cover;
@@ -219,4 +223,26 @@ nav ul li a:hover {
 }
 .be {
   display: flex;
+}
+
+/* Formato del popup */
+.info-imagen {
+  background-color: white;
+  position: absolute;
+  min-height: 100vh;
+  width: 70vw;
+  margin: auto;
+}
+
+.info-imagen-descripcion {
+}
+
+.info-imagen-imagenes {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+}
+
+.info-imagen-imagenes img {
+  max-width: 400px;
 }
