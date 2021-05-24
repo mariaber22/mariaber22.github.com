@@ -156,13 +156,39 @@ nav ul li a:hover {
 .container:hover .overlay {
   opacity: 1;
 }
+.container2:hover .overlay2 {
+  opacity: 1;
+}
+
+.container2 {
+  position: relative;
+  width: 100%;
+}
+
+.overlay2 {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Black see-through */
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: #ffffff;
+  font-size: 60px;
+  font-family: var(--font-headings);
+  padding: 10px;
+  text-align: left;
+  padding: 300px 0px 0px 10px;
+  line-height: 65px;
+}
 
 .branding-grid {
   margin: 0px;
-  grid-row-gap: 20px;
+  grid-row-gap: 10px;
   grid-column-gap: 15px;
   display: grid;
-  grid-template-rows: 400px 400px 450px;
+  grid-template-rows: 400px 400px 400px;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -197,6 +223,7 @@ nav ul li a:hover {
 .valuarte {
   grid-row: 3 / 4;
   grid-column: 2/3;
+  align-self: center;
 }
 
 .assalam {
@@ -229,20 +256,230 @@ nav ul li a:hover {
 .info-imagen {
   background-color: white;
   position: absolute;
-  min-height: 100vh;
+  height: 70vh;
   width: 70vw;
   margin: auto;
+  margin-left: 15%;
+  padding-left: 100px;
+}
+
+.info-imagen-titulo {
+  font-size: 82px;
 }
 
 .info-imagen-descripcion {
+  max-width: 50vw;
+  margin: 10px 0px 40px 0px;
 }
 
 .info-imagen-imagenes {
   display: grid;
   grid-auto-flow: column;
-  place-items: center;
 }
 
 .info-imagen-imagenes img {
   max-width: 400px;
+  max-height: 270px;
+}
+
+.info-imagen2 {
+  background-color: white;
+  position: absolute;
+  height: 70vh;
+  width: 70vw;
+  margin: auto;
+  margin-left: 15%;
+  padding-left: 100px;
+}
+
+.info-imagen-titulo2 {
+  font-size: 82px;
+}
+
+.info-imagen-descripcion2 {
+  max-width: 50vw;
+  margin: 10px 0px 40px 0px;
+}
+
+.info-imagen-imagenes2 {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.info-imagen-imagenes2 img {
+  max-width: 400px;
+  max-height: 270px;
+}
+
+.info-imagen3 {
+  background-color: white;
+  position: absolute;
+  height: 70vh;
+  width: 70vw;
+  margin: auto;
+  margin-left: 15%;
+  padding-left: 100px;
+}
+
+.info-imagen-titulo3 {
+  font-size: 82px;
+}
+
+.info-imagen-descripcion3 {
+  max-width: 50vw;
+  margin: 10px 0px 40px 0px;
+}
+
+.info-imagen-imagenes3 {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.info-imagen-imagenes3 img {
+  max-width: 400px;
+  max-height: 270px;
+}
+
+.info-imagen4 {
+  background-color: white;
+  position: absolute;
+  height: 70vh;
+  width: 70vw;
+  margin: auto;
+  margin-left: 15%;
+  padding-left: 100px;
+}
+
+.info-imagen-titulo4 {
+  font-size: 82px;
+}
+
+.info-imagen-descripcion4 {
+  max-width: 50vw;
+  margin: 10px 0px 40px 0px;
+}
+
+.info-imagen-imagenes4 {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.info-imagen-imagenes4 img {
+  max-width: 400px;
+  max-height: 270px;
+}
+
+.info-imagen5 {
+  background-color: white;
+  position: absolute;
+  height: 70vh;
+  width: 70vw;
+  margin: auto;
+  margin-left: 15%;
+  padding-left: 100px;
+}
+
+.info-imagen-titulo5 {
+  font-size: 82px;
+}
+
+.info-imagen-descripcion5 {
+  max-width: 50vw;
+  margin: 10px 0px 40px 0px;
+}
+
+.info-imagen-imagenes5 {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.info-imagen-imagenes5 img {
+  max-width: 400px;
+  max-height: 270px;
+}
+.info-imagen6 {
+  background-color: white;
+  position: absolute;
+  height: 70vh;
+  width: 70vw;
+  margin: auto;
+  margin-left: 15%;
+  padding-left: 100px;
+}
+
+.info-imagen-titulo6 {
+  font-size: 82px;
+}
+
+.info-imagen-descripcion6 {
+  max-width: 50vw;
+  margin: 10px 0px 40px 0px;
+}
+
+.info-imagen-imagenes6 {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.info-imagen-imagenes6 img {
+  max-width: 400px;
+  max-height: 270px;
+}
+
+.info-imagen7 {
+  background-color: white;
+  position: absolute;
+  height: 70vh;
+  width: 70vw;
+  margin: auto;
+  margin-left: 15%;
+  padding-left: 100px;
+}
+
+.info-imagen-titulo7 {
+  font-size: 82px;
+}
+
+.info-imagen-descripcion7 {
+  max-width: 50vw;
+  margin: 10px 0px 40px 0px;
+}
+
+.info-imagen-imagenes7 {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.info-imagen-imagenes7 img {
+  max-width: 400px;
+  max-height: 270px;
+}
+
+.info-imagen8 {
+  background-color: white;
+  position: absolute;
+  height: 70vh;
+  width: 70vw;
+  margin: auto;
+  margin-left: 15%;
+  padding-left: 100px;
+}
+
+.info-imagen-titulo8 {
+  font-size: 82px;
+}
+
+.info-imagen-descripcion8 {
+  max-width: 50vw;
+  margin: 10px 0px 40px 0px;
+}
+
+.info-imagen-imagenes8 {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.info-imagen-imagenes8 img {
+  max-width: 400px;
+  max-height: 270px;
 }
