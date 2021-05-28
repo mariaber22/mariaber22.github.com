@@ -16,22 +16,22 @@
       <nav class="nav">
         <ul role="list">
           <li>
-            <a class="menu-link" href="#about-link">about</a>
+            <a class="menu-link" href="#about">about</a>
           </li>
           <li>
-            <a class="menu-link" href="#work-link">work</a>
+            <a class="menu-link" href="#work">work</a>
           </li>
           <li>
-            <a class="menu-link" href="#contacto-link">contact</a>
+            <a class="menu-link" href="#contact">contact</a>
           </li>
         </ul>
       </nav>
       <h1 class="titulo">MARÍA BERJÓN</h1>
     </header>
 
-    <section class="categoria">
-      <h3 class="categoria-heading" id="about-link">About</h3>
-      <p class="categoria-description">
+    <section class="about" id="about">
+      <h3 class="about-heading">About</h3>
+      <p class="about-description">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus est,
         modi nulla magni quod, quae vel esse nisi animi voluptate dolorem ipsa
         ut. Voluptatum fugiat harum hic recusandae aut ea suscipit accusantium,
@@ -44,24 +44,22 @@
         non animi vitae? Iure repellat quia non qui exercitationem ullam veniam
         quis obcaecati repellendus, deleniti reiciendis numquam.
       </p>
-      <div class="categoria-images">
+      <div class="about-work">
         <div class="container">
-          <a href=""
+          <a href="#"
             ><img
-              class="kris"
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616038672/branding_yelmrc.jpg"
               alt="Proyecto kris"
               width="400"
               height="544"
             />
           </a>
-          <div class="overlay" id="work-link">Branding</div>
+          <div class="overlay">Branding</div>
         </div>
 
         <div class="container">
-          <a href="">
+          <a href="#">
             <img
-              class="serigrafia"
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620271916/lesgai_qszwqn.jpg"
               alt="Proyecto serigrafia"
               width="400"
@@ -72,9 +70,8 @@
         </div>
 
         <div class="container">
-          <a href="">
+          <a href="#">
             <img
-              class="pintura"
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620271913/cuadroazul_jzwyzz.jpg"
               alt="Proyecto pintura"
               width="400"
@@ -85,9 +82,10 @@
         </div>
       </div>
     </section>
-    <section class="categoria">
-      <h3 class="categoria-heading">Branding</h3>
-      <p class="categoria-description">
+
+    <section class="work">
+      <h3 class="work-heading">Branding</h3>
+      <p class="work-description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere
         enim dignissimos ipsa officiis soluta voluptate accusantium laudantium
         libero dolorem nihil assumenda tempora iste sint labore ullam doloremque
@@ -96,27 +94,27 @@
         laboriosam. Rerum, quisquam ex!
       </p>
     </section>
-    <section x-data="showInfo()" class="branding">
-      <div class="branding-grid">
-        <!-- aqui inicia -->
-        <a class="container2" x-spread="trigger">
+
+    <section class="branding" id="work">
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
           <img
-            class="nispero"
             src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474327/nispero_fuqdop.jpg"
             alt="Nispero"
             width="550"
             height="400"
           />
-          <div class="overlay2" id="work-link">Nispero</div>
+          <div class="overlay-titulo">Nispero</div>
         </a>
-        <div x-spread="info" class="info-imagen">
-          <h2 class="info-imagen-titulo">Nispero</h2>
-          <p class="info-imagen-descripcion">
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Nispero</h2>
+          <p class="info-descripcion">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, ab
             nobis? Vitae quaerat consequuntur veritatis ex ad eos, odit
             cupiditate?
           </p>
-          <div class="info-imagen-imagenes">
+          <div class="info-imagenes">
             <img
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620915778/shopping-bag_cavcls.jpg"
               alt=""
@@ -127,26 +125,28 @@
             />
           </div>
         </div>
-        <!-- aqui termina -->
-        <a class="container2" x-spread="trigger">
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
           <img
-            class="kreat"
             src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620268439/kreat_nccwe3.jpg"
             alt="Kreat"
             height="400"
             width="600"
           />
-          <div class="overlay2" id="work-link">Kreat</div>
+          <div class="overlay-titulo">Kreat</div>
         </a>
-        <div x-spread="info" class="info-imagen2">
-          <h2 class="info-imagen-titulo2">Kreat</h2>
-          <p class="info-imagen-descripcion2">
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Kreat</h2>
+          <p class="info-descripcion">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
             quia molestiae, numquam nulla officiis est. Magni, quos consectetur
             sint qui animi iure maxime laudantium!
           </p>
-          <div class="info-imagen-imagenes2">
+          <div class="info-imagenes">
             <img
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711873/Captura_de_Pantalla_2021-05-22_a_la_s_13.42.14_actr9b.png"
               alt=""
@@ -157,26 +157,28 @@
             />
           </div>
         </div>
+      </div>
 
-        <a class="container2" x-spread="trigger">
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
           <img
-            class="pdc"
             src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474470/pdc_hcuae2.jpg"
             alt="PDC"
             width="600"
             height="400"
           />
-          <div class="overlay2" id="work-link">PDC</div>
+          <div class="overlay-titulo">PDC</div>
         </a>
-        <div x-spread="info" class="info-imagen3">
-          <h2 class="info-imagen-titulo3">PDC</h2>
-          <p class="info-imagen-descripcion3">
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">PDC</h2>
+          <p class="info-descripcion">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
             quia molestiae, numquam nulla officiis est. Magni, quos consectetur
             sint qui animi iure maxime laudantium!
           </p>
-          <div class="info-imagen-imagenes3">
+          <div class="info-imagenes">
             <img
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711873/Captura_de_Pantalla_2021-05-22_a_la_s_13.42.14_actr9b.png"
               alt=""
@@ -187,25 +189,28 @@
             />
           </div>
         </div>
+      </div>
 
-        <a class="container2" x-spread="trigger">
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
           <img
-            class="Earth & Iron"
             src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620148738/web_mockup_kuzkym.jpg"
             alt="Earth & Iron"
             width="800"
             height="400"
           />
-          <div class="overlay2" id="work-link">Earth & Iron</div>
+          <div class="overlay-titulo">Earth & Iron</div>
         </a>
-        <div x-spread="info" class="info-imagen4">
-          <h2 class="info-imagen-titulo4">Earth & Iron</h2>
-          <p class="info-imagen-descripcion4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus quidem consequatur temporibus atque, alias cum corrupti
-            quas! Voluptatem, praesentium consectetur!
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Earth & Iron</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
           </p>
-          <div class="info-imagen-imagenes4">
+          <div class="info-imagenes">
             <img
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711599/poster_E_I_xzw3pd.jpg"
               alt=""
@@ -216,25 +221,28 @@
             />
           </div>
         </div>
+      </div>
 
-        <a class="container2" x-spread="trigger">
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
           <img
-            class="sandwich"
             src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474942/sandwicheri%CC%81a_gzvofp.jpg"
             alt="Sandwich"
             width="555"
             height="400"
           />
-          <div class="overlay2" id="work-link">Sandwicheria</div>
+          <div class="overlay-titulo">Sandwicheria</div>
         </a>
-        <div x-spread="info" class="info-imagen5">
-          <h2 class="info-imagen-titulo5">Sandwicheria</h2>
-          <p class="info-imagen-descripcion5">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus quidem consequatur temporibus atque, alias cum corrupti
-            quas! Voluptatem, praesentium consectetur!
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Sandwicheria</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
           </p>
-          <div class="info-imagen-imagenes5">
+          <div class="info-imagenes">
             <img
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711616/MOCKUP_PAPEL_rpigja.jpg"
               alt=""
@@ -245,25 +253,28 @@
             />
           </div>
         </div>
+      </div>
 
-        <a class="container2" x-spread="trigger">
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
           <img
-            class="krisg"
             src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1618867406/acapulcoo_i9alpp.jpg"
             alt="Kris Goyri"
             width="690"
             height="400"
           />
-          <div class="overlay2" id="work-link">Kris Goyri</div>
+          <div class="overlay-titulo">Kris Goyri</div>
         </a>
-        <div x-spread="info" class="info-imagen6">
-          <h2 class="info-imagen-titulo6">Kris Goyri</h2>
-          <p class="info-imagen-descripcion6">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus quidem consequatur temporibus atque, alias cum corrupti
-            quas! Voluptatem, praesentium consectetur!
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Kris Goyri</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
           </p>
-          <div class="info-imagen-imagenes6">
+          <div class="info-imagenes">
             <img
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711848/baaag_wea8fj.jpg"
               alt=""
@@ -274,25 +285,28 @@
             />
           </div>
         </div>
+      </div>
 
-        <a class="container2" x-spread="trigger">
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
           <img
-            class="assalam"
             src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616475271/asallam_blyttu.jpg"
             alt="Assalam"
             width="685"
             height="400"
           />
-          <div class="overlay2" id="work-link">Assalam</div>
+          <div class="overlay-titulo">Assalam</div>
         </a>
-        <div x-spread="info" class="info-imagen7">
-          <h2 class="info-imagen-titulo7">Assalam</h2>
-          <p class="info-imagen-descripcion7">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus quidem consequatur temporibus atque, alias cum corrupti
-            quas! Voluptatem, praesentium consectetur!
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Assalam</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
           </p>
-          <div class="info-imagen-imagenes7">
+          <div class="info-imagenes">
             <img
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711628/insta_wz8cap.jpg"
               alt=""
@@ -303,23 +317,26 @@
             />
           </div>
         </div>
+      </div>
 
-        <a class="container2" x-spread="trigger">
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
           <img
-            class="valuarte"
             src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474935/valuarte_vawgvg.jpg"
             alt="Valuarte"
           />
-          <div class="overlay2" id="work-link">Valuarte</div>
+          <div class="overlay-titulo">Valuarte</div>
         </a>
-        <div x-spread="info" class="info-imagen8">
-          <h2 class="info-imagen-titulo8">Valuarte</h2>
-          <p class="info-imagen-descripcion8">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus quidem consequatur temporibus atque, alias cum corrupti
-            quas! Voluptatem, praesentium consectetur!
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Valuarte</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
           </p>
-          <div class="info-imagen-imagenes8">
+          <div class="info-imagenes">
             <img
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711665/papeleria_ajdz7h.jpg"
               alt=""
@@ -330,25 +347,28 @@
             />
           </div>
         </div>
+      </div>
 
-        <a class="container2" x-spread="trigger">
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
           <img
-            class="tentree"
             src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620268631/tentreemockup_mc3mtt.jpg"
             alt="Tentree "
             width="685"
             height="400"
           />
-          <div class="overlay2" id="work-link">Tentree</div>
+          <div class="overlay-titulo">Tentree</div>
         </a>
-        <div x-spread="info" class="info-imagen8">
-          <h2 class="info-imagen-titulo8">Tentree</h2>
-          <p class="info-imagen-descripcion8">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus quidem consequatur temporibus atque, alias cum corrupti
-            quas! Voluptatem, praesentium consectetur!
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Tentree</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
           </p>
-          <div class="info-imagen-imagenes8">
+          <div class="info-imagenes">
             <img
               src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711679/CARTELES_hmwvbw.jpg"
               alt=""
@@ -362,34 +382,32 @@
       </div>
     </section>
 
-    <section class="categoria">
-      <h3 class="categoria-heading" id="contacto-link">Contacto</h3>
-      <p class="categoria-description">
+    <section class="contacto" id="contact">
+      <h3 class="contacto-heading">Contacto</h3>
+      <p class="contacto-description">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit,
         quod, consectetur quo accusamus in, voluptates exercitationem itaque
         libero culpa natus dicta molestias odio ab. Exercitationem ipsa enim,
         amet quae quod rem. Velit quis voluptas consectetur eum provident, at
         eius voluptatum.
       </p>
-      <form>
+      <!-- <form>
         <label for="email">Enter your email:</label>
         <input type="email" id="email" name="email" />
         <input type="submit" />
-      </form>
+      </form> -->
 
       <nav class="redes">
-        <a href=" "
+        <a href="https://www.instagram.com"
           ><img
-            class="insta"
             src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1617679243/instagram-2_oagt7c.svg"
             alt="Instagram"
             width="50"
             height="50"
           />
         </a>
-        <a href=" "
+        <a href="https://www.behance.net"
           ><img
-            class="be"
             src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1617679231/behance-logo_hnyjju.svg"
             alt="Behance"
             width="50"
