@@ -186,6 +186,34 @@ nav ul li a:hover {
   align-content: end;
 }
 
+@media screen and (max-width: 600px) {
+  .about,
+  .work,
+  .contacto {
+    margin: 50px 0;
+    grid-row-gap: 0;
+    padding: 0;
+  }
+
+  .about-heading,
+  .work-heading,
+  .contacto-heading {
+    --h3: 34px;
+    padding-left: 30px;
+  }
+
+  .about-description,
+  .work-description,
+  .contacto-description {
+    max-width: 85vw;
+    margin: 20px auto 40px;
+  }
+
+  .overlay {
+    font-size: 40px;
+  }
+}
+
 /* About */
 .about-work {
   display: grid;
@@ -193,6 +221,16 @@ nav ul li a:hover {
   margin-right: 60px;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .about-work {
+    display: grid;
+    grid-auto-flow: row;
+    margin: 20px auto;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 
 /* Work */
@@ -213,6 +251,16 @@ nav ul li a:hover {
 .proyecto {
   position: relative;
   width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  #work {
+    grid-template-columns: unset;
+    grid-auto-rows: unset;
+    gap: 40px;
+    max-width: 500px;
+    margin: auto;
+  }
 }
 
 /* Formato del popup */
@@ -291,6 +339,77 @@ nav ul li a:hover {
 .info-imagenes img {
   max-width: 400px;
   max-height: 270px;
+}
+
+@media screen and (min-width: 1440px) {
+  .info {
+    position: absolute;
+    display: block;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .proyecto > * {
+    padding: 1em;
+    margin: 0;
+  }
+
+  .proyecto:nth-child(1) .info {
+    transform: translate(-40px, -20px);
+  }
+
+  .proyecto:nth-child(2) .info {
+    transform: translate(100px, -20px);
+  }
+
+  .proyecto:nth-child(3) .info {
+    transform: translate(240px, -20px);
+  }
+
+  .proyecto:nth-child(4) .info {
+    transform: translate(-40px, 280px);
+  }
+
+  .proyecto:nth-child(5) .info {
+    transform: translate(100px, 280px);
+  }
+
+  .proyecto:nth-child(6) .info {
+    transform: translate(240px, 280px);
+  }
+
+  .proyecto:nth-child(7) .info {
+    transform: translate(-40px, 610px);
+  }
+
+  .proyecto:nth-child(8) .info {
+    transform: translate(100px, 610px);
+  }
+
+  .proyecto:nth-child(9) .info {
+    transform: translate(240px, 610px);
+  }
+
+  .info-titulo {
+    --h2: 30px;
+  }
+
+  .info-descripcion {
+    max-width: none;
+    margin: 0;
+  }
+
+  .info-imagenes {
+    display: block;
+  }
+
+  .info-imagenes img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    margin-top: 20px;
+  }
 }
 
 /* Contacto */
