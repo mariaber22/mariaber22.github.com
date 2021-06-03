@@ -139,6 +139,7 @@ nav ul li a:hover {
 .contacto-description {
   max-width: 60vw;
   margin-bottom: 60px;
+  font-size: 20px;
 }
 
 .container,
@@ -170,7 +171,7 @@ nav ul li a:hover {
 
 .overlay-titulo {
   position: absolute;
-  bottom: 0;
+  bottom: -25px;
   background: rgba(0, 0, 0, 0.6);
   color: #ffffff;
   width: 100%;
@@ -180,10 +181,10 @@ nav ul li a:hover {
   color: #ffffff;
   font-size: 60px;
   font-family: var(--font-headings);
-  padding: 1rem;
-  display: grid;
-  justify-content: start;
-  align-content: end;
+  padding: 10px;
+  text-align: left;
+  padding: 300px 0px 0px 10px;
+  line-height: 45px;
 }
 
 @media screen and (max-width: 600px) {
@@ -253,16 +254,6 @@ nav ul li a:hover {
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
-  #work {
-    grid-template-columns: unset;
-    grid-auto-rows: unset;
-    gap: 40px;
-    max-width: 500px;
-    margin: auto;
-  }
-}
-
 /* Formato del popup */
 .info {
   position: absolute;
@@ -326,14 +317,14 @@ nav ul li a:hover {
 }
 
 .info-descripcion {
-  max-width: 50vw;
-  margin: 10px 0px 40px 0px;
+  max-width: 30vw;
+  margin: auto;
 }
 
 .info-imagenes {
   display: grid;
-  grid-auto-flow: column;
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
 .info-imagenes img {
@@ -360,55 +351,58 @@ nav ul li a:hover {
   }
 
   .proyecto:nth-child(2) .info {
-    transform: translate(100px, -20px);
+    transform: translate(-40px, -20px);
   }
 
   .proyecto:nth-child(3) .info {
-    transform: translate(240px, -20px);
+    transform: translate(-40px, -20px);
   }
 
   .proyecto:nth-child(4) .info {
-    transform: translate(-40px, 280px);
+    transform: translate(-40px, 100px);
   }
 
   .proyecto:nth-child(5) .info {
-    transform: translate(100px, 280px);
+    transform: translate(-40px, 100px);
   }
 
   .proyecto:nth-child(6) .info {
-    transform: translate(240px, 280px);
+    transform: translate(-40px, 100px);
   }
 
   .proyecto:nth-child(7) .info {
-    transform: translate(-40px, 610px);
+    transform: translate(-40px, 210px);
   }
 
   .proyecto:nth-child(8) .info {
-    transform: translate(100px, 610px);
+    transform: translate(-40px, 210px);
   }
 
   .proyecto:nth-child(9) .info {
-    transform: translate(240px, 610px);
+    transform: translate(-40px, 210px);
   }
 
   .info-titulo {
-    --h2: 30px;
+    --h2: 60px;
   }
 
   .info-descripcion {
-    max-width: none;
-    margin: 0;
+    max-width: 60vw;
+    margin: auto;
   }
 
   .info-imagenes {
-    display: block;
+    display: grid;
+    margin-bottom: 50px;
+    justify-content: center;
+    gap: 15px;
+    grid-template-columns: 400px 400px;
   }
 
   .info-imagenes img {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    margin-top: 20px;
+    width: auto;
+    max-height: 250px;
+    margin-top: 50px;
   }
 }
 
@@ -419,4 +413,87 @@ nav ul li a:hover {
   margin-right: 60px;
   grid-column-gap: 20px;
   grid-template-columns: 50px 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .container .overlay {
+    opacity: 1;
+  }
+  .overlay-titulo {
+    bottom: 0;
+    opacity: 1;
+    background: transparent;
+  }
+  .valu {
+    color: black;
+  }
+  #work {
+    grid-template-columns: unset;
+    grid-auto-rows: unset;
+    gap: 40px;
+    max-width: 500px;
+    margin: auto;
+  }
+  .proyecto > * {
+    padding: 1em;
+    margin: 0;
+  }
+  .proyecto:nth-child(1) .info {
+    transform: translate(-80px, -200px);
+  }
+
+  .proyecto:nth-child(2) .info {
+    transform: translate(110px, -200px);
+  }
+
+  .proyecto:nth-child(3) .info {
+    transform: translate(310px, -230px);
+  }
+
+  .proyecto:nth-child(4) .info {
+    transform: translate(-80px, 75px);
+  }
+
+  .proyecto:nth-child(5) .info {
+    transform: translate(110px, 70px);
+  }
+
+  .proyecto:nth-child(6) .info {
+    transform: translate(310px, 70px);
+  }
+
+  .proyecto:nth-child(7) .info {
+    transform: translate(-80px, 430px);
+  }
+
+  .proyecto:nth-child(8) .info {
+    transform: translate(110px, 400px);
+  }
+
+  .proyecto:nth-child(9) .info {
+    transform: translate(310px, 430px);
+  }
+  .info-titulo {
+    font-size: 48px;
+    align-self: right;
+  }
+
+  .info-descripcion {
+    max-width: 90vw;
+    margin: auto;
+  }
+
+  .info-imagenes {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    margin-top: 50px;
+  }
+
+  .info-imagenes img {
+    max-width: 90%;
+    max-height: 90%;
+    margin-bottom: 50px;
+  }
 }
