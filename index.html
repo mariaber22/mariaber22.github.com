@@ -1,499 +1,745 @@
-/* Tipografia */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap");
-
-/* Variables */
-:root {
-  --primario: #a09487;
-  --bg: #ffffff;
-  font-family: "Roboto", sans-serif;
-  --font-headings: "Montserrat", sans-serif;
-  --h1: 108px;
-  --h2: 82px;
-  --h3: 54px;
-  --h4: 36px;
-  --h5: 24px;
-  --h6: 16px;
-}
-
-/* Base */
-body {
-  font-family: inherit;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-headings);
-  color: var(--primario);
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Componentes */
-.header {
-  background-image: url("https://res.cloudinary.com/dk8ssnuuv/image/upload/v1614715309/Dibujando_1_rryz6h.jpg");
-  background-size: cover;
-  background-position: left top;
-  background-repeat: no-repeat;
-  height: 1000px;
-  color: white;
-}
-
-.nav {
-  width: 85vw;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.nav ul {
-  display: flex;
-  gap: 140px;
-  margin: 0;
-  padding: 20px;
-}
-
-.nav ul li {
-  /* background-color: rgba(0, 0, 255, 0.2); */
-  height: 40px;
-  line-height: 40px;
-}
-
-.nav ul li:last-child {
-  margin-left: auto;
-}
-
-.nav ul li a {
-  display: block;
-  transition: transform 450ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
-}
-
-nav ul li a:hover {
-  transform: translateY(-10px) scale(1.3);
-}
-
-.titulo {
-  min-height: 650px;
-  line-height: 650px;
-  text-align: center;
-  color: white;
-}
-
-@media screen and (min-width: 1440px) {
-  .header {
-    background-position: left bottom;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .header {
-    background-position: center;
-  }
-  .nav {
-    width: 90vw;
-    padding: 2rem 0;
-  }
-  .nav ul {
-    margin: 0 auto;
-    padding: 0;
-    gap: 0;
-  }
-  .nav ul li:last-child {
-    margin-left: unset;
-  }
-  .nav ul li {
-    flex: 1;
-    display: grid;
-  }
-  .nav ul li a {
-    place-self: center;
-  }
-}
-
-/* Secciones global */
-.about,
-.work,
-.contacto {
-  margin: 60px 0;
-  display: grid;
-  grid-row-gap: 20px;
-  padding-left: 150px;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-
-.about-heading,
-.work-heading,
-.contacto-heading {
-  font-size: var(--h3);
-  font-weight: 400;
-}
-
-.about-description,
-.work-description,
-.contacto-description {
-  max-width: 60vw;
-  margin-bottom: 60px;
-  font-size: 20px;
-}
-
-.container,
-.proyecto figure {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-}
-
-.container:hover .overlay {
-  opacity: 1;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  background: var(--primario); /* Black see-through */
-  color: #ffffff;
-  width: 100%;
-  transition: 0.5s ease;
-  opacity: 0;
-  color: #ffffff;
-  font-size: 60px;
-  font-family: var(--font-headings);
-  padding: 10px;
-  text-align: left;
-  line-height: 65px;
-}
-
-.overlay-titulo {
-  position: absolute;
-  bottom: -25px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s ease;
-  opacity: 0;
-  color: #ffffff;
-  font-size: 60px;
-  font-family: var(--font-headings);
-  padding: 10px;
-  text-align: left;
-  padding: 300px 0px 0px 10px;
-  line-height: 45px;
-}
-
-@media screen and (max-width: 600px) {
-  .about,
-  .work,
-  .contacto {
-    margin: 50px 0;
-    grid-row-gap: 0;
-    padding: 0;
-  }
-
-  .about-heading,
-  .work-heading,
-  .contacto-heading {
-    --h3: 34px;
-    padding-left: 30px;
-  }
-
-  .about-description,
-  .work-description,
-  .contacto-description {
-    max-width: 85vw;
-    margin: 20px auto 40px;
-  }
-
-  .overlay {
-    font-size: 40px;
-  }
-}
-
-/* About */
-.about-work {
-  display: grid;
-  grid-auto-flow: column;
-  margin-right: 60px;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-}
-
-@media screen and (max-width: 600px) {
-  .about-work {
-    display: grid;
-    grid-auto-flow: row;
-    margin: 20px auto;
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-}
-
-/* Work */
-#work {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: 400px;
-  grid-row-gap: 10px;
-  grid-column-gap: 15px;
-  max-width: max-content;
-  margin: auto;
-}
-
-.proyecto:hover .overlay-titulo {
-  opacity: 1;
-}
-
-.proyecto {
-  position: relative;
-  width: 100%;
-}
-
-/* Formato del popup */
-.info {
-  position: absolute;
-  display: grid;
-  place-content: center;
-  width: 70vw;
-  height: auto;
-  margin: auto;
-  padding: 2em 0 4em;
-  background-color: white;
-  z-index: 100;
-}
-
-.proyecto:nth-child(1) .info {
-  margin-top: -20vh;
-  margin-left: 20vw;
-}
-
-.proyecto:nth-child(2) .info {
-  margin-top: -20vh;
-  margin-left: -12vw;
-}
-
-.proyecto:nth-child(3) .info {
-  margin-top: -20vh;
-  margin-left: -45vw;
-}
-
-.proyecto:nth-child(4) .info {
-  margin-top: -55vh;
-  margin-left: 20vw;
-}
-
-.proyecto:nth-child(5) .info {
-  margin-top: -55vh;
-  margin-left: -12vw;
-}
-
-.proyecto:nth-child(6) .info {
-  margin-top: -55vh;
-  margin-left: -45vw;
-}
-
-.proyecto:nth-child(7) .info {
-  margin-top: -95vh;
-  margin-left: 20vw;
-}
-
-.proyecto:nth-child(8) .info {
-  margin-top: -85vh;
-  margin-left: -12vw;
-}
-
-.proyecto:nth-child(9) .info {
-  margin-top: -95vh;
-  margin-left: -45vw;
-}
-
-.info-titulo {
-  font-size: var(--h2);
-}
-
-.info-descripcion {
-  max-width: 30vw;
-  margin: auto;
-}
-
-.info-imagenes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.info-imagenes img {
-  max-width: 400px;
-  max-height: 270px;
-}
-
-@media screen and (min-width: 1440px) {
-  .info {
-    position: absolute;
-    display: block;
-    min-width: 0;
-    margin: 0;
-    padding: 0;
-  }
-
-  .proyecto > * {
-    padding: 1em;
-    margin: 0;
-  }
-
-  .proyecto:nth-child(1) .info {
-    transform: translate(-40px, -20px);
-  }
-
-  .proyecto:nth-child(2) .info {
-    transform: translate(-40px, -20px);
-  }
-
-  .proyecto:nth-child(3) .info {
-    transform: translate(-40px, -20px);
-  }
-
-  .proyecto:nth-child(4) .info {
-    transform: translate(-40px, 100px);
-  }
-
-  .proyecto:nth-child(5) .info {
-    transform: translate(-40px, 100px);
-  }
-
-  .proyecto:nth-child(6) .info {
-    transform: translate(-40px, 100px);
-  }
-
-  .proyecto:nth-child(7) .info {
-    transform: translate(-40px, 210px);
-  }
-
-  .proyecto:nth-child(8) .info {
-    transform: translate(-40px, 210px);
-  }
-
-  .proyecto:nth-child(9) .info {
-    transform: translate(-40px, 210px);
-  }
-
-  .info-titulo {
-    --h2: 60px;
-  }
-
-  .info-descripcion {
-    max-width: 60vw;
-    margin: auto;
-  }
-
-  .info-imagenes {
-    display: grid;
-    margin-bottom: 50px;
-    justify-content: center;
-    gap: 15px;
-    grid-template-columns: 400px 400px;
-  }
-
-  .info-imagenes img {
-    width: auto;
-    max-height: 250px;
-    margin-top: 50px;
-  }
-}
-
-/* Contacto */
-.redes {
-  display: grid;
-  justify-self: right;
-  margin-right: 60px;
-  grid-column-gap: 20px;
-  grid-template-columns: 50px 50px;
-}
-
-@media screen and (max-width: 600px) {
-  .container .overlay {
-    opacity: 1;
-  }
-  .overlay-titulo {
-    bottom: 0;
-    opacity: 1;
-    background: transparent;
-  }
-  .valu {
-    color: black;
-  }
-  #work {
-    grid-template-columns: unset;
-    grid-auto-rows: unset;
-    gap: 40px;
-    max-width: 500px;
-    margin: auto;
-  }
-  .proyecto > * {
-    padding: 1em;
-    margin: 0;
-  }
-  .proyecto:nth-child(1) .info {
-    transform: translate(-80px, -200px);
-  }
-
-  .proyecto:nth-child(2) .info {
-    transform: translate(110px, -200px);
-  }
-
-  .proyecto:nth-child(3) .info {
-    transform: translate(310px, -230px);
-  }
-
-  .proyecto:nth-child(4) .info {
-    transform: translate(-80px, 75px);
-  }
-
-  .proyecto:nth-child(5) .info {
-    transform: translate(110px, 70px);
-  }
-
-  .proyecto:nth-child(6) .info {
-    transform: translate(310px, 70px);
-  }
-
-  .proyecto:nth-child(7) .info {
-    transform: translate(-80px, 430px);
-  }
-
-  .proyecto:nth-child(8) .info {
-    transform: translate(110px, 400px);
-  }
-
-  .proyecto:nth-child(9) .info {
-    transform: translate(310px, 430px);
-  }
-  .info-titulo {
-    font-size: 48px;
-    align-self: right;
-  }
-
-  .info-descripcion {
-    max-width: 90vw;
-    margin: auto;
-  }
-
-  .info-imagenes {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-    margin-top: 50px;
-  }
-
-  .info-imagenes img {
-    max-width: 90%;
-    max-height: 90%;
-    margin-bottom: 50px;
-  }
-}
+<!DOCTYPE html>
+<html lang="en-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>María Berjón - Diseñadora gráfica</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="layout">
+    <header class="header">
+      <nav class="nav">
+        <ul role="list">
+          <li>
+            <a class="menu-link" href="#about">about</a>
+          </li>
+          <li>
+            <a class="menu-link" href="#work">work</a>
+          </li>
+          <li>
+            <a class="menu-link" href="#contact">contact</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="titulo">MARÍA BERJÓN</h1>
+    </header>
+
+    <section class="about" id="about">
+      <h3 class="about-heading">About</h3>
+      <p class="about-description">
+        ¡Hola! Soy María y estudio la carrera de comunicación visual, en la
+        universidad Centro de Diseño Cine y televisión, en la Ciudad de México.
+        El arte y la creatividad son cosas que me han apasionado siempre.Tengo
+        experiencia en la creación de contenido visual para marcas e identidad;
+        como logotipos, diseño web y redes sociales, además me gusta mucho la
+        ilustración, y las artes plásticas. ¡Estaré feliz de trabajar contigo en
+        tu proyecto!
+      </p>
+      <div class="about-work">
+        <div class="container">
+          <a href="#"
+            ><img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616038672/branding_yelmrc.jpg"
+              alt="Proyecto kris"
+              width="400"
+              height="544"
+            />
+          </a>
+          <div class="overlay">Branding</div>
+        </div>
+
+        <div class="container">
+          <a href="#">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620271916/lesgai_qszwqn.jpg"
+              alt="Proyecto serigrafia"
+              width="400"
+              height="544"
+            />
+          </a>
+          <div class="overlay">Proyectos de diseño</div>
+        </div>
+
+        <div class="container">
+          <a href="https://google.com">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620271913/cuadroazul_jzwyzz.jpg"
+              alt="Proyecto pintura"
+              width="400"
+              height="544"
+            />
+          </a>
+          <div class="overlay">Arte</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work">
+      <h3 class="work-heading">Branding</h3>
+      <p class="work-description">
+        El branding, o la identidad de marca, es una de las áreas del diseño que
+        más me gustan. Esta categoría del diseño envuelve todos los aspectos
+        visuales que necesitas para que tu marca se sienta como una marca. Tener
+        una identidad visual fuerte como negocio, es clave para que sea todo un
+        éxito. Aquí puedes ver algunos ejemplos:
+      </p>
+    </section>
+
+    <section class="branding" id="work">
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474327/nispero_fuqdop.jpg"
+            alt="Nispero"
+            width="550"
+            height="400"
+          />
+          <div class="overlay-titulo">Nispero</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Nispero</h2>
+          <p class="info-descripcion">
+            Níspero es un mercadito orgánico en Cuernavaca, por la zona de
+            Rancho Cortés. Con los mejores productos de origen natural y
+            orgánico. Su estética es rústica y cálida, ofreciendo un ambiente
+            familiar. Todos estos conceptos han sido reflejados en la identidad
+            de esta marca, y a partir de los bocetos, se eligió el que más
+            hiciera sentido con todos estos aspectos anteriormente mencionados,
+            para generar el logotipo del mercado.
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620915778/shopping-bag_cavcls.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620915785/pizarron_interno_copia_ubn3eb.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620268439/kreat_nccwe3.jpg"
+            alt="Kreat"
+            height="400"
+            width="600"
+          />
+          <div class="overlay-titulo">Kreat</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Kreat</h2>
+          <p class="info-descripcion">
+            Kreat es una contructora 100% mexicana que ofrece soluciones de
+            mobiliario, acabados y obras civiles para espacios de cualquier
+            tipo, con los materiales de mejor calidad.
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711873/Captura_de_Pantalla_2021-05-22_a_la_s_13.42.14_actr9b.png"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711882/Captura_de_Pantalla_2021-05-22_a_la_s_13.41.59_uxrfd5.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474470/pdc_hcuae2.jpg"
+            alt="PDC"
+            width="600"
+            height="400"
+          />
+          <div class="overlay-titulo">PDC</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">PDC</h2>
+          <p class="info-descripcion">
+            Perth Diabetes Care es una clínica de salud en la ciudad de Perth,
+            Australia, que brinda servicios a personas que padecen todo tipo de
+            diabetes y afecciones crónicas.Esta empresa tiene a los mejores
+            profesionales de la salud incluyendo educadores en diabetes,
+            dietistas, fisiólogos de ejercicio, consejeros, psicólogos clínicos
+            y podólogos. Utilizan las pautas de las mejores prácticas actuales y
+            tecnología para brindar atención médica y educación individualizada
+            para ayudar a las personas que viven con una afección crónica de
+            diabetes a lograr sus objetivos de salud y estilo de vida.
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711563/stationary_PDC_sjdmxg.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711577/PDC_Instagram_hewifu.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620148738/web_mockup_kuzkym.jpg"
+            alt="Earth & Iron"
+            width="800"
+            height="400"
+          />
+          <div class="overlay-titulo">Earth & Iron</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Earth & Iron</h2>
+          <p class="info-descripcion">
+            Earth&Iron es una marca inglesa que ofrece una manera rápida,
+            saludable y deliciosa de obtener tu dosis de proteína diaria, para
+            mantenerte satisfecho y sentirte bien. Los dos sabores de batido de
+            proteína, (cacao y café) son hechos a base de plantas, con
+            ingredientes naturales y de la mejor calidad, aptos para una dieta
+            vegana. Esta marca busca atraer un público joven, interesado en
+            bienestar, que tienen un estilo de vida ocupado, y Earth&Iron
+            satisface estas necesidades al ser una bebida muy fácil de tomar,
+            ahorrarles tiempo, mantenerlos saciados, y sintiéndose bien al
+            consumir un producto natural de la mejor calidad.
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711599/poster_E_I_xzw3pd.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711588/Van_E_I_2_xmtmxy.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474942/sandwicheri%CC%81a_gzvofp.jpg"
+            alt="Sandwich"
+            width="555"
+            height="400"
+          />
+          <div class="overlay-titulo">Sandwicheria</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Sandwicheria</h2>
+          <p class="info-descripcion">
+            Sandwichería es una cafetería situada en Polanco México, que vende
+            sándwiches de todo tipo. Lo especial de estos sandwiches es que son
+            elaborados con pan de masa madre recién hecho, con ingredientes
+            frescos. La Sandwichería tiene mucha variedad de panes e
+            ingredientes para que puedas crear el sándwich más rico que se te
+            pueda ocurrir!
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711616/MOCKUP_PAPEL_rpigja.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711607/mandil_qnptgn.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1618867406/acapulcoo_i9alpp.jpg"
+            alt="Kris Goyri"
+            width="690"
+            height="400"
+          />
+          <div class="overlay-titulo">Kris Goyri</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Kris Goyri</h2>
+          <p class="info-descripcion">
+            Este proyecto fue para el evento de celebración por los 10 años de
+            la marca de ropa del diseñador mexicano Kris Goyri, basado en
+            Acapulco. En este proyecto quisimos reflejar la naturaleza y
+            texturas de esta playa tan icónica de México, que al igual la
+            naturaleza es un factor e inspiración constante en los diseños de
+            Kris.
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711848/baaag_wea8fj.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1618867406/acapulcoo_i9alpp.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616475271/asallam_blyttu.jpg"
+            alt="Assalam"
+            width="685"
+            height="400"
+          />
+          <div class="overlay-titulo">Assalam</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Assalam</h2>
+          <p class="info-descripcion">
+            Asallam es un centro de equinoterapia en Tepoztlán Morelos, para
+            niños, adultos y personas con necesidades especiales como autismo,
+            síndrome de down o parálisis cerebral. Al igual que sirve para
+            tratar casos de depresión y bloqueos emocionales, la terapia con
+            caballos ofrece grandes beneficios al estar en contacto con un
+            animal tan especial.
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711628/insta_wz8cap.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711639/Captura_de_Pantalla_2020-08-22_a_la_s_0.31.52_mulkla.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474935/valuarte_vawgvg.jpg"
+            alt="Valuarte"
+          />
+          <div class="overlay-titulo valu">Valuarte</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Valuarte</h2>
+          <p class="info-descripcion">
+            Valuarte es una empresa mexicana que se dedica a vender artesanías
+            online y productos mexicanos elaborados por artesanos de toda la
+            república, exportándolos principalmente a países europeos donde
+            pagan bien por estos productos. Lo que busca valuarte, es darles un
+            precio justo y digno por el gran trabajo que hacen los artesanos
+            mexicanos y enaltecer el arte tradicional de nuestro país.
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711665/papeleria_ajdz7h.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711650/Wooden_Stamp_Mockup_ea6nxi.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620268631/tentreemockup_mc3mtt.jpg"
+            alt="Tentree "
+            width="685"
+            height="400"
+          />
+          <div class="overlay-titulo">Tentree</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Tentree</h2>
+          <p class="info-descripcion">
+            Esta fue una colaboración entre la marca de ropa Tentree, y Kleenex
+            de Kimberly Clark, y surge por la necesidad de Kleenex de limpiar su
+            imagen de ser una empresa a la cual no le importa el medio ambiente
+            al talar tantos árboles, colaborando con una empresa que se dedica a
+            la reforestación. Se creó un envase de Kleenex biodegradable en el
+            que al acabarte los Kleenex viene una semilla en el fondo lista para
+            ser sembrada en el envase tubular de Kleenex y una vez germinada,
+            plantar el árbol tú mismo, generando más conciencia ambiental a las
+            personas al tener esta experiencia. Esta colaboración también es muy
+            beneficiosa apara Tentree ya que lograrán tener una visibilidad
+            mundial y dar a conocer su
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711679/CARTELES_hmwvbw.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711713/anuncio_02_ttoymm.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Esto de abajo aplicaria si estuviera la seccion de proyectos de diseno -->
+    <!--
+    <section class="work">
+      <h3 class="work-heading">Proyectos de diseño</h3>
+      <p class="work-description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe facere
+        enim dignissimos ipsa officiis soluta voluptate accusantium laudantium
+        libero dolorem nihil assumenda tempora iste sint labore ullam doloremque
+        odit, sapiente voluptatibus? Excepturi, ducimus. Minus sunt, optio nulla
+        incidunt ex repellendus iusto perspiciatis dolore nobis illum unde
+        laboriosam. Rerum, quisquam ex!
+      </p>
+    </section> -->
+
+    <!--
+    <section class="branding" id="work">
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474327/nispero_fuqdop.jpg"
+            alt="Nispero"
+            width="550"
+            height="400"
+          />
+          <div class="overlay-titulo">Otro</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Otro</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem, ab
+            nobis? Vitae quaerat consequuntur veritatis ex ad eos, odit
+            cupiditate?
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620915778/shopping-bag_cavcls.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620915785/pizarron_interno_copia_ubn3eb.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620268439/kreat_nccwe3.jpg"
+            alt="Kreat"
+            height="400"
+            width="600"
+          />
+          <div class="overlay-titulo">Kreat</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Kreat</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711873/Captura_de_Pantalla_2021-05-22_a_la_s_13.42.14_actr9b.png"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711882/Captura_de_Pantalla_2021-05-22_a_la_s_13.41.59_uxrfd5.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474470/pdc_hcuae2.jpg"
+            alt="PDC"
+            width="600"
+            height="400"
+          />
+          <div class="overlay-titulo">PDC</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">PDC</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711873/Captura_de_Pantalla_2021-05-22_a_la_s_13.42.14_actr9b.png"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711882/Captura_de_Pantalla_2021-05-22_a_la_s_13.41.59_uxrfd5.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620148738/web_mockup_kuzkym.jpg"
+            alt="Earth & Iron"
+            width="800"
+            height="400"
+          />
+          <div class="overlay-titulo">Earth & Iron</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Earth & Iron</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711599/poster_E_I_xzw3pd.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711588/Van_E_I_2_xmtmxy.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474942/sandwicheri%CC%81a_gzvofp.jpg"
+            alt="Sandwich"
+            width="555"
+            height="400"
+          />
+          <div class="overlay-titulo">Sandwicheria</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Sandwicheria</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711616/MOCKUP_PAPEL_rpigja.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711607/mandil_qnptgn.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1618867406/acapulcoo_i9alpp.jpg"
+            alt="Kris Goyri"
+            width="690"
+            height="400"
+          />
+          <div class="overlay-titulo">Kris Goyri</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Kris Goyri</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711848/baaag_wea8fj.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1618867406/acapulcoo_i9alpp.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616475271/asallam_blyttu.jpg"
+            alt="Assalam"
+            width="685"
+            height="400"
+          />
+          <div class="overlay-titulo">Assalam</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Assalam</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711628/insta_wz8cap.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711639/Captura_de_Pantalla_2020-08-22_a_la_s_0.31.52_mulkla.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1616474935/valuarte_vawgvg.jpg"
+            alt="Valuarte"
+          />
+          <div class="overlay-titulo">Valuarte</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Valuarte</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711665/papeleria_ajdz7h.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711650/Wooden_Stamp_Mockup_ea6nxi.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div x-data="showInfo()" class="proyecto">
+        <a x-spread="trigger">
+          <img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1620268631/tentreemockup_mc3mtt.jpg"
+            alt="Tentree "
+            width="685"
+            height="400"
+          />
+          <div class="overlay-titulo">Tentree</div>
+        </a>
+
+        <div x-spread="info" class="info">
+          <h2 class="info-titulo">Tentree</h2>
+          <p class="info-descripcion">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Accusantium, minima delectus cupiditate assumenda pariatur obcaecati
+            quia molestiae, numquam nulla officiis est. Magni, quos consectetur
+            sint qui animi iure maxime laudantium!
+          </p>
+          <div class="info-imagenes">
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711679/CARTELES_hmwvbw.jpg"
+              alt=""
+            />
+            <img
+              src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1621711713/anuncio_02_ttoymm.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="contacto" id="contact">
+      <h3 class="contacto-heading">Contacto</h3>
+      <p class="contacto-description">
+        Si te ha gustado mi trabajo, no dudes en ponerte en contacto conmigo.
+        Escríbeme y dejame saber si tienes dudas!
+      </p>
+      <!-- <form>
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" />
+        <input type="submit" />
+      </form> -->
+
+      <nav class="redes">
+        <a href="https://www.instagram.com"
+          ><img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1617679243/instagram-2_oagt7c.svg"
+            alt="Instagram"
+            width="50"
+            height="50"
+          />
+        </a>
+        <a href="https://www.behance.net"
+          ><img
+            src="https://res.cloudinary.com/dk8ssnuuv/image/upload/v1617679231/behance-logo_hnyjju.svg"
+            alt="Behance"
+            width="50"
+            height="50"
+          />
+        </a>
+      </nav>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.8.2/alpine.js"></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
